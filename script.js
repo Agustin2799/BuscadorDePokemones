@@ -58,7 +58,7 @@ async function indicePokemon(objetoJs, nombrePokemon) {
     while (paginaActual.next) {
         //Itera por el objeto results de la página actual
         for (i = 0; i < paginaActual.results.length; i++) {
-            if (paginaActual.results[i].name === nombrePokemon) {
+            if (paginaActual.results[i].name === nombrePokemon.toLowerCase()) {
                 //devuelve el indice del objeto que tiene el nombre del pokemón.
                 return paginaActual.results[i];
             }
